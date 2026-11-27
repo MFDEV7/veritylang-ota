@@ -1,0 +1,202 @@
+{
+  "otaVersion": "1.10.1",
+  "releasedAt": "2026-11-27T17:28:33+03:00",
+  "channel": "stable",
+  "otaChannel": "github",
+  "updateManifestUrl": "https://github.com/MFDEV7/veritylang-ota/releases/latest/download/update-manifest.json",
+  "fallbackManifestUrl": "https://mfdev7.github.io/veritylang-ota/ota/update-manifest.json",
+  "notes": "v1.10.1: Eski Android sürümlerinde (Android 8–13 / MIUI / OneUI / ColorOS / EMUI) alt yazma kutusunun 200ms aralıkla sürekli gel-git titremesi ve WhatsApp/Instagram arka plandan komple kapatıldığında ekranda kalan kaplamalar kesin olarak düzeltildi (odak/katman öncelikli pencere çözümleyici, API 26–29 getRealMetrics fiziksel ekran ölçümü, 320ms klavye geçiş tamponu, 26/26 test).",
+  "supportedPlatforms": [
+    "emclient",
+    "whatsapp",
+    "wechat",
+    "telegram",
+    "discord",
+    "instagram",
+    "slack",
+    "teams",
+    "messenger"
+  ],
+  "platformRules": {
+    "whatsapp": {
+      "hosts": ["web.whatsapp.com"],
+      "messageSelectors": [
+        "#main div.message-in span.selectable-text.copyable-text",
+        "#main div.message-out span.selectable-text.copyable-text"
+      ],
+      "outgoingClosest": ".message-out, [class*=\"message-out\"]",
+      "headerSelectors": ["#main > header", "#main header"],
+      "inputSelectors": [
+        "#main footer div[contenteditable=\"true\"]",
+        "footer div[contenteditable=\"true\"][data-tab]"
+      ],
+      "sendButtonSelectors": [
+        "button[data-testid=\"compose-btn-send\"]",
+        "span[data-icon=\"send\"]",
+        "span[data-icon=\"wds-ic-send-filled\"]",
+        "button[aria-label*=\"Gönder\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])",
+        "button[aria-label*=\"Send\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])"
+      ]
+    },
+    "wechat": {
+      "hosts": [
+        "wx.qq.com",
+        "wx2.qq.com",
+        "web.wechat.com",
+        "web1.wechat.com",
+        "web2.wechat.com",
+        "filehelper.weixin.qq.com",
+        "szfilehelper.weixin.qq.com"
+      ],
+      "messageSelectors": [
+        "#chatArea .message .bubble .plain pre.js_message_plain",
+        "#chatArea .message .bubble_cont .plain pre",
+        ".chat_bd .message .plain pre",
+        ".msg-list .msg-item .msg-text",
+        ".chat-panel .msg-item .msg-text"
+      ],
+      "outgoingClosest": ".message.me, .msg-item.me, .is-me",
+      "headerSelectors": [
+        "#chatArea .box_hd .title_wrap",
+        "#chatArea .box_hd",
+        ".chat_hd",
+        ".header .title"
+      ],
+      "inputSelectors": [
+        "#editArea[contenteditable=\"true\"]",
+        "pre#editArea",
+        "#chatArea .box_ft .content pre[contenteditable=\"true\"]",
+        ".box_ft textarea",
+        ".input-box textarea",
+        ".input-box [contenteditable=\"true\"]"
+      ],
+      "sendButtonSelectors": [
+        "#chatArea .box_ft .action a.btn_send",
+        "a.btn.btn_send",
+        ".send-btn",
+        "button.btn-send"
+      ]
+    },
+    "telegram": {
+      "hosts": ["telegram.org", "web.telegram.org", "k.telegram.org", "a.telegram.org"],
+      "messageSelectors": [
+        ".chat.active .bubbles .bubble .translatable-message",
+        "#MiddleColumn .Message .text-content",
+        ".history .im_message_text"
+      ],
+      "outgoingClosest": ".is-out, .message-out, .own",
+      "headerSelectors": [
+        ".chat.active .sidebar-header.topbar",
+        ".chat.active .chat-info-container",
+        ".MiddleHeader",
+        ".chat-info-container",
+        ".top-bar"
+      ],
+      "inputSelectors": [
+        ".chat.active .input-message-input[contenteditable=\"true\"]",
+        "#editable-message-text",
+        ".input-message-input[contenteditable=\"true\"]"
+      ],
+      "sendButtonSelectors": [
+        ".chat.active .btn-send",
+        ".btn-send",
+        "button.send",
+        ".Button.send"
+      ]
+    },
+    "discord": {
+      "hosts": ["discord.com", "ptb.discord.com", "canary.discord.com"],
+      "messageSelectors": [
+        "main [id^=\"message-content-\"]",
+        "ol[data-list-id=\"chat-messages\"] [id^=\"message-content-\"]"
+      ],
+      "outgoingClosest": "[class*=\"isSending\"]",
+      "headerSelectors": [
+        "section[class*=\"title_\"] div[class*=\"toolbar_\"]",
+        "section[aria-label*=\"Channel header\" i] div[class*=\"toolbar_\"]",
+        "main div[class*=\"title_\"] div[class*=\"toolbar_\"]",
+        "section[class*=\"title_\"]",
+        "main header"
+      ],
+      "inputSelectors": ["div[role=\"textbox\"][data-slate-editor=\"true\"]"],
+      "sendButtonSelectors": [
+        "button[aria-label*=\"Send Message\" i]",
+        "button[aria-label*=\"Mesaj Gönder\" i]"
+      ]
+    },
+    "instagram": {
+      "hosts": ["instagram.com", "www.instagram.com"],
+      "messageSelectors": [
+        "div[role=\"main\"] div[role=\"row\"] div[role=\"gridcell\"] div[dir=\"auto\"]",
+        "div[role=\"main\"] div[role=\"row\"] div[dir=\"auto\"]"
+      ],
+      "outgoingClosest": "[style*=\"flex-end\"], [style*=\"justify-content: flex-end\"]",
+      "headerSelectors": ["div[role=\"main\"] header", "main header"],
+      "inputSelectors": [
+        "div[role=\"main\"] div[role=\"textbox\"][contenteditable=\"true\"]",
+        "div[role=\"textbox\"][contenteditable=\"true\"][aria-label*=\"Mesaj\" i]",
+        "div[role=\"textbox\"][contenteditable=\"true\"][aria-label*=\"Message\" i]"
+      ],
+      "sendButtonSelectors": [
+        "div[role=\"main\"] div[role=\"button\"][aria-label*=\"Send\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])",
+        "div[role=\"main\"] div[role=\"button\"][aria-label*=\"Gönder\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])"
+      ]
+    },
+    "slack": {
+      "hosts": ["app.slack.com"],
+      "messageSelectors": [
+        ".c-virtual_list__scroll_container [data-qa=\"message-text\"] .p-rich_text_section",
+        ".c-virtual_list__scroll_container [data-qa=\"message-text\"] .p-rich_text_list li",
+        ".c-virtual_list__scroll_container [data-qa=\"message-text\"] .p-rich_text_quote",
+        ".p-threads_flexpane [data-qa=\"message-text\"] .p-rich_text_section",
+        "[data-qa=\"slack_kit_list\"] .c-message_kit__blocks .p-rich_text_section",
+        ".p-workspace__primary_view_body .c-message__body"
+      ],
+      "outgoingClosest": "[data-qa=\"message_sender_is_self\"], .c-message--is_self",
+      "headerSelectors": [".p-view_header", "[data-qa=\"channel_header\"]"],
+      "inputSelectors": ["div.ql-editor[contenteditable=\"true\"][role=\"textbox\"]", "[data-qa=\"message_input\"] div[contenteditable=\"true\"]"],
+      "sendButtonSelectors": ["button[data-qa=\"texty_send_button\"]"]
+    },
+    "teams": {
+      "hosts": ["teams.microsoft.com", "teams.live.com", "teams.cloud.microsoft"],
+      "messageSelectors": [
+        "[data-tid=\"message-pane-list-runway\"] [data-tid=\"message-body-content\"]",
+        "[data-tid=\"messageBodyContent\"]"
+      ],
+      "outgoingClosest": "[data-tid=\"my-message\"], [class*=\"fui-ChatMyMessage\"]",
+      "headerSelectors": ["[data-tid=\"chat-header\"]", "[data-tid=\"channel-header\"]"],
+      "inputSelectors": [
+        "div[role=\"textbox\"][contenteditable=\"true\"][data-tid=\"ckeditor\"]",
+        "[data-tid=\"ckeditor-reply-box\"] div[role=\"textbox\"][contenteditable=\"true\"]",
+        "[data-tid=\"ckeditor\"] [contenteditable=\"true\"]",
+        "main div[role=\"textbox\"][contenteditable=\"true\"]",
+        "div[role=\"textbox\"][contenteditable=\"true\"]"
+      ],
+      "sendButtonSelectors": [
+        "button[data-tid=\"sendMessageCommands-send\"]",
+        "button[name=\"send\"]",
+        "button[aria-label*=\"Send\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])",
+        "button[aria-label*=\"Gönder\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])"
+      ]
+    },
+    "messenger": {
+      "hosts": ["messenger.com", "www.messenger.com", "www.facebook.com", "facebook.com"],
+      "messageSelectors": [
+        "div[role=\"main\"] div[role=\"row\"] div[role=\"gridcell\"] div[dir=\"auto\"]",
+        "div[role=\"main\"] div[role=\"row\"] div[dir=\"auto\"]"
+      ],
+      "outgoingClosest": "[style*=\"flex-end\"], [style*=\"justify-content: flex-end\"]",
+      "headerSelectors": ["div[role=\"main\"] header", "main header"],
+      "inputSelectors": [
+        "div[role=\"main\"] div[role=\"textbox\"][contenteditable=\"true\"]",
+        "div[role=\"textbox\"][contenteditable=\"true\"][aria-label]",
+        "div[role=\"textbox\"][contenteditable=\"true\"]"
+      ],
+      "sendButtonSelectors": [
+        "div[role=\"main\"] div[aria-label*=\"Press enter to send\" i]",
+        "div[role=\"main\"] div[role=\"button\"][aria-label*=\"Send\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])",
+        "div[role=\"main\"] div[role=\"button\"][aria-label*=\"Gönder\" i]:not([aria-label*=\"voice\" i]):not([aria-label*=\"sesli\" i]):not([aria-label*=\"audio\" i]):not([aria-label*=\"gif\" i]):not([aria-label*=\"like\" i]):not([aria-label*=\"beğen\" i]):not([aria-label*=\"file\" i]):not([aria-label*=\"dosya\" i]):not([aria-label*=\"sticker\" i]):not([aria-label*=\"çıkartma\" i])"
+      ]
+    }
+  }
+}

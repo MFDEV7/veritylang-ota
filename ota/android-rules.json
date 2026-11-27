@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "rulesVersion": "1.10.1",
+  "updatedAt": "2026-11-27T17:28:33+03:00",
+  "notes": "Kurulumsuz Canlı Kural Motoru v1.10.0 — WhatsApp, WeChat (MMNeat7extView), Instagram, Telegram, Messenger, Signal, Discord ve Slack kuralları ile doğal balon renkleri ve akıllı gürültü filtreleri.",
+  "knownMessageIds": [
+    "message_text",
+    "caption",
+    "quoted_text",
+    "poll_name",
+    "poll_option_name",
+    "chat_text",
+    "chatting_content",
+    "direct_text_message",
+    "message_content",
+    "message_body",
+    "conversation_item_body",
+    "chat_list_adapter_item_text"
+  ],
+  "strictKnownIdPackages": [
+    "com.whatsapp",
+    "com.whatsapp.w4b"
+  ],
+  "weChatTextClasses": [
+    "TextView",
+    "7extView",
+    "MMNeat7extView",
+    "NeatTextView"
+  ],
+  "extraChromeIdTokens": [],
+  "extraNoiseExact": [],
+  "extraNoisePatterns": [],
+  "extraTurkishWords": [],
+  "extraUnreliableShortLatinLangs": [],
+  "engineOrder": [
+    "gtx",
+    "at",
+    "clients5",
+    "dictex",
+    "mymemory"
+  ],
+  "defaultAiModels": {
+    "gemini": "gemini-2.5-flash",
+    "openai": "gpt-4o-mini",
+    "deepseek": "deepseek-chat"
+  },
+  "bubblePalettes": {
+    "com.whatsapp": {
+      "darkInBg": "#202C33",
+      "darkInTxt": "#E9EDEF",
+      "darkOutBg": "#005C4B",
+      "darkOutTxt": "#E9EDEF",
+      "lightInBg": "#FFFFFF",
+      "lightInTxt": "#111B21",
+      "lightOutBg": "#D9FDD3",
+      "lightOutTxt": "#111B21"
+    },
+    "com.whatsapp.w4b": {
+      "darkInBg": "#202C33",
+      "darkInTxt": "#E9EDEF",
+      "darkOutBg": "#005C4B",
+      "darkOutTxt": "#E9EDEF",
+      "lightInBg": "#FFFFFF",
+      "lightInTxt": "#111B21",
+      "lightOutBg": "#D9FDD3",
+      "lightOutTxt": "#111B21"
+    },
+    "com.tencent.mm": {
+      "darkInBg": "#2C2C2C",
+      "darkInTxt": "#E5E5E5",
+      "darkOutBg": "#3EB575",
+      "darkOutTxt": "#111827",
+      "lightInBg": "#FFFFFF",
+      "lightInTxt": "#191919",
+      "lightOutBg": "#95EC69",
+      "lightOutTxt": "#191919"
+    },
+    "org.telegram.messenger": {
+      "darkInBg": "#182533",
+      "darkInTxt": "#F5F5F5",
+      "darkOutBg": "#2B5278",
+      "darkOutTxt": "#F5F5F5",
+      "lightInBg": "#FFFFFF",
+      "lightInTxt": "#111827",
+      "lightOutBg": "#EEFFDE",
+      "lightOutTxt": "#111827"
+    },
+    "org.thunderdog.challegram": {
+      "darkInBg": "#182533",
+      "darkInTxt": "#F5F5F5",
+      "darkOutBg": "#2B5278",
+      "darkOutTxt": "#F5F5F5",
+      "lightInBg": "#FFFFFF",
+      "lightInTxt": "#111827",
+      "lightOutBg": "#EEFFDE",
+      "lightOutTxt": "#111827"
+    },
+    "com.instagram.android": {
+      "darkInBg": "#262626",
+      "darkInTxt": "#F5F5F5",
+      "darkOutBg": "#3797F0",
+      "darkOutTxt": "#FFFFFF",
+      "lightInBg": "#EFEFEF",
+      "lightInTxt": "#0F172A",
+      "lightOutBg": "#3797F0",
+      "lightOutTxt": "#FFFFFF"
+    },
+    "com.facebook.orca": {
+      "darkInBg": "#303030",
+      "darkInTxt": "#E4E6EB",
+      "darkOutBg": "#0084FF",
+      "darkOutTxt": "#FFFFFF",
+      "lightInBg": "#E4E6EB",
+      "lightInTxt": "#050505",
+      "lightOutBg": "#0084FF",
+      "lightOutTxt": "#FFFFFF"
+    },
+    "com.discord": {
+      "darkInBg": "#313338",
+      "darkInTxt": "#DBDEE1",
+      "darkOutBg": "#313338",
+      "darkOutTxt": "#DBDEE1",
+      "lightInBg": "#FFFFFF",
+      "lightInTxt": "#313338",
+      "lightOutBg": "#FFFFFF",
+      "lightOutTxt": "#313338"
+    },
+    "com.Slack": {
+      "darkInBg": "#1A1D21",
+      "darkInTxt": "#D1D2D3",
+      "darkOutBg": "#1A1D21",
+      "darkOutTxt": "#D1D2D3",
+      "lightInBg": "#FFFFFF",
+      "lightInTxt": "#1D1C1D",
+      "lightOutBg": "#FFFFFF",
+      "lightOutTxt": "#1D1C1D"
+    }
+  }
+}

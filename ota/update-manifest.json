@@ -1,0 +1,47 @@
+{
+    "schemaVersion":  1,
+    "version":  "1.10.1",
+    "releasedAt":  "2026-11-27T17:28:33+03:00",
+    "channel":  "github",
+    "mandatory":  false,
+    "notes":  "v1.10.1: Eski Android sürümlerinde (Android 8–13 / MIUI / OneUI / ColorOS / EMUI) alt yazma kutusunun 200ms aralıkla sürekli gel-git titremesi ve WhatsApp/Instagram arka plandan komple kapatıldığında ekranda kalan kaplamalar kesin olarak düzeltildi (odak/katman öncelikli pencere çözümleyici, API 26–29 getRealMetrics fiziksel ekran ölçümü, 320ms klavye geçiş tamponu, 26/26 test).",
+    "exeUrl":  "VerityLang-Desktop.exe",
+    "exeSha256":  "42f93225b34c90b67cc9d0664d33f6cdf677d739dcc7d4b8658112f16f8fa9b8",
+    "exeSize":  596480,
+    "otaConfigUrl":  "ota-config.json",
+    "otaConfigSha256":  "01c96ad5c019dc19883b13e484349066f7e32f470c8d83a995e3cc8b0d38405a",
+    "desktopPortableZipUrl":  "https://github.com/MFDEV7/veritylang-ota/releases/latest/download/VerityLang-Desktop-Portable-latest.zip",
+    "extensionVersion":  "1.10.1",
+    "extensionZipUrl":  "https://github.com/MFDEV7/veritylang-ota/releases/latest/download/VerityLang-Chrome-Extension-latest.zip",
+    "extensionZipSha256":  "38ec75f73c7a74ab0368a2ff59d17470eb29c8743e63aa54f70e3a7b7880841d",
+    "extensionRulesUrl":  "ota-rules.json",
+    "webVersion":  "1.10.1",
+    "webUrl":  "https://mfdev7.github.io/veritylang-ota/",
+    "androidVersion":  "1.10.1",
+    "androidApkUrl":  "https://github.com/MFDEV7/veritylang-ota/releases/latest/download/VerityLang-Android-latest.apk",
+    "androidApkSha256":  "fa1ec1afcaecce8ac02506169699b1cb1d77fadfc443050a121a728d1824630b",
+    "androidApkSize":  707101,
+    "androidSafeApkUrl":  "https://github.com/MFDEV7/veritylang-ota/releases/latest/download/VerityLang-Android-Guvenli.apk",
+    "androidSafeApkSha256":  "fa1ec1afcaecce8ac02506169699b1cb1d77fadfc443050a121a728d1824630b",
+    "androidSafeApkSize":  707101,
+    "androidProApkUrl":  "https://github.com/MFDEV7/veritylang-ota/releases/latest/download/VerityLang-Android-Pro.apk",
+    "androidProApkSha256":  "a341de29eee49175e87e8f4ec6eb694f535d29e891cf140257ee7c78f6a8459c",
+    "androidProApkSize":  780607,
+    "androidRulesVersion":  "1.10.1",
+    "androidRulesUrl":  "https://github.com/MFDEV7/veritylang-ota/releases/latest/download/android-rules.json",
+    "androidRulesSha256":  "bd28b461fcd95bf471ba7b73f2850a65dafcf22453902c39a814abc54fe7a734",
+    "assets":  [
+                   {
+                       "path":  "VerityLang-Desktop.exe.config",
+                       "url":  "VerityLang-Desktop.exe.config",
+                       "sha256":  "5ff66487eee5a63b72372d138be85fdbfcf8a0285fdb55186432dde9b1ccc3a2",
+                       "size":  408
+                   },
+                   {
+                       "path":  "Baslat.bat",
+                       "url":  "Baslat.bat",
+                       "sha256":  "bec933153e33a24e37e67334660f0a366f08e252af017e121c0a92697e28a36c",
+                       "size":  233
+                   }
+               ]
+}
